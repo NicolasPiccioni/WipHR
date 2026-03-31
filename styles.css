@@ -1,0 +1,278 @@
+:root{
+    --Primary-BG: #012623;
+    --Secondary-BG: #01332f;
+    --Terciary-BG: #01403a;
+
+    --Accent-Color: #5eb7ac;
+
+    --Blanco: #ffffff;
+    --Gris: #f5f5f5;
+    --Gris-Secundario: #d9d9d9;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--Terciary-BG);
+}
+
+/* ----------------------------------------------------------------------------------------------- 
+                                        NAVIGATION STYLES
+----------------------------------------------------------------------------------------------- */
+
+.Nav__Container{
+    background-color: var(--Secondary-BG);
+
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
+.Nav__List{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+.Nav__Logo--Image{
+    width: 200px;
+}
+
+.Nav__Item--Link{
+    margin-right: 46px;
+    padding: 8px 36px;
+
+    background-color: var(--Accent-Color);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: var(--Blanco);
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------- 
+                                            MAIN STYLES
+----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------- 
+          Main Article
+----------------------------- */
+
+.Hero__Article{
+    display: flex;
+    justify-content: center;
+
+    padding: 12px 32px;
+}
+
+.Hero{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    max-width: 1050px;
+}
+
+/* ---- Hero Content ---- */
+
+.Hero__Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    flex: 1 1 450px;
+    min-width: 300px;
+    max-width: 750px;
+}
+
+.Hero__Title{
+    font-size: 2rem;
+    color: var(--Blanco);
+
+    margin: 0;
+
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.Hero__Description{
+    font-size: 1.2rem;
+    color: var(--Gris);
+
+    margin: 18px 0;
+
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.Hero__Links--Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.Hero__CTA{
+    padding: 8px 36px;
+
+    background-color: var(--Accent-Color);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: var(--Blanco);
+    text-decoration: none;
+}
+
+/* ---- Hero Image ---- */
+
+.Hero__Image{
+    flex: 1 1 450px;
+    max-width: 500pxs;
+}
+
+.Hero__Image--Graphic{
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------- 
+          Cards Article
+----------------------------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.service-card {
+    position: relative;
+    text-align: center;
+    padding: 110px 35px 35px 35px;
+    background-color: #1a5555;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 139, 139, 0.3);
+}
+
+.icon {
+    position: absolute;
+    top: -1px;
+    left: -0px;
+    width: 80px;
+    height: 80px;
+    background-color: #4A8B8B;
+    border-radius: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.icon svg {
+    width: 42px;
+    height: 42px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin: 0 0 18px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #d2e1df;
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------- 
+                                            MOBILE STYLES
+----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- 
+                                            MAIN STYLES
+----------------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .Hero{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .Hero__Content{
+        flex: 0;
+    }
+
+    .Hero__Image{
+        flex: unset; /* 🔥 importante */
+        
+        width: 100%;
+        max-width: 450px;
+
+        margin: 0 auto;
+    }
+}
