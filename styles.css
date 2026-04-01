@@ -416,165 +416,88 @@ h1 {
     Contact Section Article
 ----------------------------- */
 
-.ContactSection__Article{
-    background: linear-gradient(180deg, #0f4a41 0%, #0b3c32 100%);
-    padding: 64px 24px 36px;
-}
-
-.ContactSection{
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.05fr);
-    gap: 42px;
+/* Contact */
+.Contact__Section{
+    display: flex;
+    justify-content: center;
     align-items: center;
+
+    padding: 16px 24px;
 }
 
-.ContactSection__Content{
-    color: #ffffff;
+.Contact__Content{
+    flex: 1 1 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
 
-.ContactSection__Title{
+.Contact__Title{
     margin: 0;
-    font-size: clamp(3rem, 5vw, 4rem);
-    line-height: 1.02;
-    letter-spacing: -0.04em;
+    color: var(--Blanco);
+    font-size: 2.2rem;
+
+    text-align: center;
 }
 
-.ContactSection__Description{
-    margin: 24px 0 0;
-    max-width: 520px;
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.88);
+.Contact__Description{
+    margin: 0;
+    font-size: 1rem;
+    color: var(--Gris-Secundario);
+    text-align: center;
 }
 
-.ContactSection__Actions{
+.Contact__Links--Container{
     display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
-.ContactButton{
-    display: inline-flex;
+.Contact__Link{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 14px;
-    min-width: 220px;
-    padding: 16px 26px;
-    border-radius: 999px;
+    gap: 8px;
+
+    background-color: var(--Accent-Color);
+    color: var(--Blanco);
     text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px 52px;
+    border-radius: 24px;
+
+    width: 100%;
 }
 
-.ContactButton:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+/* Contact Image */
+.Contact__Image--Container{
+    flex: 1 1 500px;
+    max-width: 600px;
 }
 
-.ContactButton--Mail{
-    background-color: rgba(255, 255, 255, 0.14);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.Contact__Image{
+    width: 100%;
 }
 
-.ContactButton--WhatsApp{
-    background-color: #5eb7ac;
-    color: #012623;
-}
-
-.ContactButton svg{
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-}
-
-.ContactSection__Socials{
+.Contact__SocialLinks--Container{
     display: flex;
     justify-content: center;
-    gap: 16px;
-    margin-top: 40px;
+    align-items: center;
+    gap: 24px;
 }
 
-.SocialLink{
-    width: 56px;
-    height: 56px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.Social__Link{
+    background-color: var(--Blanco);
+    color: var(--Terciary-BG);
+    text-decoration: none;
+
+    padding: 12px;
     border-radius: 50%;
-    background-color: #ffffff;
-    color: #012623;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.SocialLink:hover{
-    transform: translateY(-2px);
-    background-color: rgba(255, 255, 255, 0.22);
-}
-
-.ContactSection__Visual{
-    display: flex;
-    justify-content: center;
-}
-
-.ContactIllustration{
-    position: relative;
-    width: 100%;
-    max-width: 620px;
-}
-
-.ContactIllustration__Backdrop{
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 25% 35%, rgba(255,255,255,0.1), transparent 32%),
-                radial-gradient(circle at 70% 20%, rgba(255,255,255,0.08), transparent 28%),
-                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 32%);
-    border-radius: 36px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.ContactIllustration__Image{
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 36px;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 940px) {
-    .ContactSection{
-        grid-template-columns: 1fr;
-    }
-
-    .ContactSection__Actions{
-        justify-content: center;
-    }
-
-    .ContactSection__Socials{
-        justify-content: center;
-    }
-}
-
-@media (max-width: 620px) {
-    .ContactSection__Title{
-        font-size: 2.6rem;
-    }
-
-    .ContactButton{
-        width: 100%;
-        justify-content: center;
-    }
+    line-height: 0; /* para centrar el SVG */
 }
 
 /* ----------------------------- 
@@ -582,19 +505,31 @@ h1 {
 ----------------------------- */
 
 .PageFooter{
-    margin-top: 28px;
     text-align: center;
-    padding: 28px 20px 24px;
+    padding: 16px 20px;
     color: #d1e9e2;
     font-size: 0.95rem;
     background-color: #012623;
 }
 
-.PageFooter span{
-    display: block;
-    margin-top: 8px;
+.PageFooter p{
+    margin: 0;
     color: rgba(209, 233, 226, 0.82);
     font-size: 0.92rem;
+}
+
+.PageFooter span{
+    display: block;
+    color: rgba(209, 233, 226, 0.82);
+    font-size: 0.92rem;
+
+    margin-bottom: 6px;
+}
+
+.Footer_IMG--Link{
+    display: inline-block;
+    color: rgba(209, 233, 226, 0.82);
+    font-size: 0.62rem;
 }
 
 /* ----------------------------------------------------------------------------------------------- 
@@ -634,6 +569,36 @@ h1 {
     ----------------------------- */
 
     .Attention__SecondIMG--Container{
+        display: none;
+    }
+
+    /* ----------------------------- 
+            Contact Article
+    ----------------------------- */
+
+    .Contact__Content{
+        flex: 1 1 auto;
+    }
+
+    .Contact__Image--Container{
+        flex: 1 1 auto;
+
+        width: 100%;
+    }
+
+    .Contact__Section{
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media (max-width: 416px) {
+    
+    .Nav__List{
+        justify-content: center;
+    }
+
+    .Nav__Item--Link{
         display: none;
     }
 
