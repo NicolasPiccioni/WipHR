@@ -22,183 +22,6 @@ body{
     background-color: var(--Terciary-BG);
 }
 
-.ContactSection__Article{
-    background: linear-gradient(180deg, #0f4a41 0%, #0b3c32 100%);
-    padding: 64px 24px 36px;
-}
-
-.ContactSection{
-    max-width: 1180px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.05fr);
-    gap: 42px;
-    align-items: center;
-}
-
-.ContactSection__Content{
-    color: #ffffff;
-}
-
-.ContactSection__Title{
-    margin: 0;
-    font-size: clamp(3rem, 5vw, 4rem);
-    line-height: 1.02;
-    letter-spacing: -0.04em;
-}
-
-.ContactSection__Description{
-    margin: 24px 0 0;
-    max-width: 520px;
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: rgba(255, 255, 255, 0.88);
-}
-
-.ContactSection__Actions{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 36px;
-}
-
-.ContactButton{
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 220px;
-    padding: 16px 26px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.ContactButton:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
-}
-
-.ContactButton--Mail{
-    background-color: rgba(255, 255, 255, 0.14);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.ContactButton--WhatsApp{
-    background-color: #5eb7ac;
-    color: #012623;
-}
-
-.ContactButton svg{
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-}
-
-.ContactSection__Socials{
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 40px;
-}
-
-.SocialLink{
-    width: 56px;
-    height: 56px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #012623;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.SocialLink:hover{
-    transform: translateY(-2px);
-    background-color: rgba(255, 255, 255, 0.22);
-}
-
-.ContactSection__Visual{
-    display: flex;
-    justify-content: center;
-}
-
-.ContactIllustration{
-    position: relative;
-    width: 100%;
-    max-width: 620px;
-}
-
-.ContactIllustration__Backdrop{
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 25% 35%, rgba(255,255,255,0.1), transparent 32%),
-                radial-gradient(circle at 70% 20%, rgba(255,255,255,0.08), transparent 28%),
-                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 32%);
-    border-radius: 36px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.ContactIllustration__Image{
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 36px;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
-}
-
-.PageFooter{
-    margin-top: 28px;
-    text-align: center;
-    padding: 28px 20px 24px;
-    color: #d1e9e2;
-    font-size: 0.95rem;
-    background-color: #012623;
-}
-
-.PageFooter span{
-    display: block;
-    margin-top: 8px;
-    color: rgba(209, 233, 226, 0.82);
-    font-size: 0.92rem;
-}
-
-@media (max-width: 940px) {
-    .ContactSection{
-        grid-template-columns: 1fr;
-    }
-
-    .ContactSection__Actions{
-        justify-content: center;
-    }
-
-    .ContactSection__Socials{
-        justify-content: center;
-    }
-}
-
-@media (max-width: 620px) {
-    .ContactSection__Title{
-        font-size: 2.6rem;
-    }
-
-    .ContactButton{
-        width: 100%;
-        justify-content: center;
-    }
-}
-
 /* ----------------------------------------------------------------------------------------------- 
                                         NAVIGATION STYLES
 ----------------------------------------------------------------------------------------------- */
@@ -320,272 +143,6 @@ body{
 .Hero__Image--Graphic{
     width: 100%;
     height: auto;
-}
-
-/* ----------------------------- 
-       Showcase Section
------------------------------ */
-
-.Showcase__Article{
-    background: linear-gradient(180deg, #01332f 0%, #012623 100%);
-    padding: 40px 24px 72px;
-}
-
-.Showcase{
-    max-width: 1220px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.Showcase__Decorations{
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-.Showcase__Leaf{
-    position: absolute;
-    top: 52px;
-    left: 38px;
-    width: 88px;
-    height: 42px;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 999px;
-    transform: rotate(-20deg);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.Showcase__Leaf::before,
-.Showcase__Leaf::after{
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: 999px;
-}
-
-.Showcase__Leaf::before{
-    top: 10px;
-    left: 12px;
-    width: 32px;
-    height: 12px;
-}
-
-.Showcase__Leaf::after{
-    top: 16px;
-    left: 40px;
-    width: 30px;
-    height: 10px;
-}
-
-.Showcase__Megaphone{
-    position: absolute;
-    top: 38%;
-    right: 24px;
-    width: 130px;
-    height: 92px;
-}
-
-.Megaphone__Body,
-.Megaphone__Horn,
-.Megaphone__Handle{
-    position: absolute;
-}
-
-.Megaphone__Horn{
-    top: 12px;
-    right: 0;
-    width: 80px;
-    height: 60px;
-    background: #ebf6f5;
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-    border: 4px solid rgba(14, 71, 69, 0.18);
-    border-left: none;
-    border-radius: 16px 24px 24px 16px;
-}
-
-.Megaphone__Body{
-    top: 22px;
-    left: 12px;
-    width: 70px;
-    height: 46px;
-    background: #5eb7ac;
-    border-radius: 28px 24px 22px 24px;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.24);
-}
-
-.Megaphone__Handle{
-    bottom: 2px;
-    left: 28px;
-    width: 16px;
-    height: 36px;
-    background: #ebf6f5;
-    border-radius: 10px;
-    transform: rotate(-12deg);
-}
-
-.Showcase__Topbar{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 36px;
-}
-
-.Showcase__TopbarBadge{
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    padding: 18px 24px;
-    background-color: rgba(0, 0, 0, 0.22);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 16px;
-}
-
-.Showcase__TopoIcon{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #012623;
-    font-weight: 800;
-    font-size: 1.4rem;
-}
-
-.Showcase__TopbarText strong,
-.Showcase__TopbarText span{
-    display: block;
-    color: #ffffff;
-}
-
-.Showcase__TopbarText strong{
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-}
-
-.Showcase__TopbarText span{
-    font-size: 0.82rem;
-    color: #d1f0eb;
-}
-
-.Showcase__Grid{
-    display: grid;
-    grid-template-columns: minmax(280px, 1fr) minmax(340px, 1fr) minmax(360px, 1fr);
-    gap: 32px;
-    align-items: center;
-}
-
-.Showcase__Badge{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 24px;
-    padding: 30px 22px;
-    background-color: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 28px;
-    text-align: center;
-}
-
-.Showcase__BadgeImage{
-    max-width: 180px;
-    width: 100%;
-    height: auto;
-}
-
-.Showcase__BadgeText{
-    margin: 0;
-    color: #c1f1ea;
-    text-transform: uppercase;
-    font-size: 0.93rem;
-    letter-spacing: 0.18em;
-}
-
-.Showcase__Text{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.Showcase__Title{
-    margin: 0;
-    font-size: clamp(2.4rem, 4vw, 4rem);
-    line-height: 1.02;
-    color: #ffffff;
-}
-
-.Showcase__Description{
-    margin: 0;
-    max-width: 520px;
-    color: #d6e7e2;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.Showcase__Button{
-    display: inline-block;
-    width: fit-content;
-    padding: 14px 34px;
-    background-color: #5eb7ac;
-    color: #ffffff;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 16px 32px rgba(29, 93, 86, 0.22);
-}
-
-.Showcase__ImageContainer{
-    position: relative;
-    display: grid;
-    place-items: center;
-}
-
-.Showcase__Image{
-    width: 100%;
-    max-width: 520px;
-    border-radius: 24px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
-}
-
-.Showcase__ImageBadge{
-    position: absolute;
-    bottom: 28px;
-    right: 22px;
-    padding: 12px 18px;
-    background: rgba(94, 183, 172, 0.95);
-    color: #012623;
-    border-radius: 999px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.8rem;
-}
-
-@media (max-width: 1100px) {
-    .Showcase__Grid{
-        grid-template-columns: 1.2fr 1.3fr;
-    }
-
-    .Showcase__Badge{
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 860px) {
-    .Showcase__Grid{
-        grid-template-columns: 1fr;
-    }
-
-    .Showcase__Badge,
-    .Showcase__Text,
-    .Showcase__ImageContainer{
-        justify-self: center;
-    }
-
-    .Showcase__Badge{
-        align-items: center;
-    }
 }
 
 /* ----------------------------- 
@@ -773,8 +330,271 @@ h1 {
         Attention Article
 ----------------------------- */
 
-.Attention img{
-    max-width: 300px;
+.Attention{
+    position: relative;
+
+    padding: 24px 0 0;
+}
+
+/* Contenedor principal con proporción fija */
+.Attention__FirstIMG--Container{
+    width: 100%;
+    max-width: 750px; /* límite opcional */
+    
+    aspect-ratio: 16 / 10; /* reemplaza height: 400px */
+    overflow: hidden;
+
+    margin: 0 auto; /* centra */
+}
+
+/* Imagen principal */
+.Attention__FirstIMG{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* mueve la imagen de forma proporcional */
+    object-position: center clamp(14%, 5vw, 50%);
+}
+
+/* Imagen secundaria */
+.Attention__SecondIMG--Container{
+    position: absolute;
+
+    /* posiciones proporcionales */
+    top: clamp(20%, 12%, 30%);
+    left: 2%;
+
+    /* tamaño flexible */
+    width: clamp(200px, 22vw, 350px);
+    aspect-ratio: 1 / 1;
+}
+
+.Attention__SecondIMG{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----------------------------- 
+       Best Talent Article
+----------------------------- */
+
+.BestTalent__Article{
+    background-color: var(--Primary-BG);
+    padding: 16px;
+
+    text-align: center;
+}
+
+.BestTalent__Title{
+    margin: 0 0 24px;
+
+    font-size: 2.2rem;
+    color: var(--Blanco);
+}
+
+.BestTalent__Description{
+    font-size: 1rem;
+    color: var(--Gris-Secundario);
+}
+
+.BestTalent__CTA{
+    display: inline-block;
+    padding: 8px 36px;
+
+    background-color: var(--Accent-Color);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: var(--Blanco);
+    text-decoration: none;
+
+    margin-top: 6px;
+}
+
+/* ----------------------------- 
+    Contact Section Article
+----------------------------- */
+
+.ContactSection__Article{
+    background: linear-gradient(180deg, #0f4a41 0%, #0b3c32 100%);
+    padding: 64px 24px 36px;
+}
+
+.ContactSection{
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.05fr);
+    gap: 42px;
+    align-items: center;
+}
+
+.ContactSection__Content{
+    color: #ffffff;
+}
+
+.ContactSection__Title{
+    margin: 0;
+    font-size: clamp(3rem, 5vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+.ContactSection__Description{
+    margin: 24px 0 0;
+    max-width: 520px;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.ContactSection__Actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 36px;
+}
+
+.ContactButton{
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+    padding: 16px 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ContactButton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+}
+
+.ContactButton--Mail{
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.ContactButton--WhatsApp{
+    background-color: #5eb7ac;
+    color: #012623;
+}
+
+.ContactButton svg{
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.ContactSection__Socials{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.SocialLink{
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #012623;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SocialLink:hover{
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.ContactSection__Visual{
+    display: flex;
+    justify-content: center;
+}
+
+.ContactIllustration{
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+}
+
+.ContactIllustration__Backdrop{
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 25% 35%, rgba(255,255,255,0.1), transparent 32%),
+                radial-gradient(circle at 70% 20%, rgba(255,255,255,0.08), transparent 28%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 32%);
+    border-radius: 36px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ContactIllustration__Image{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 36px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 940px) {
+    .ContactSection{
+        grid-template-columns: 1fr;
+    }
+
+    .ContactSection__Actions{
+        justify-content: center;
+    }
+
+    .ContactSection__Socials{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .ContactSection__Title{
+        font-size: 2.6rem;
+    }
+
+    .ContactButton{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ----------------------------- 
+            Footer
+----------------------------- */
+
+.PageFooter{
+    margin-top: 28px;
+    text-align: center;
+    padding: 28px 20px 24px;
+    color: #d1e9e2;
+    font-size: 0.95rem;
+    background-color: #012623;
+}
+
+.PageFooter span{
+    display: block;
+    margin-top: 8px;
+    color: rgba(209, 233, 226, 0.82);
+    font-size: 0.92rem;
 }
 
 /* ----------------------------------------------------------------------------------------------- 
@@ -786,6 +606,10 @@ h1 {
 ----------------------------------------------------------------------------------------------- */
 
 @media (max-width: 900px) {
+
+    /* ----------------------------- 
+              Main Article
+    ----------------------------- */
 
     .Hero{
         flex-direction: column-reverse;
@@ -804,4 +628,13 @@ h1 {
 
         margin: 0 auto;
     }
+
+    /* ----------------------------- 
+            Attention Article
+    ----------------------------- */
+
+    .Attention__SecondIMG--Container{
+        display: none;
+    }
+
 }
