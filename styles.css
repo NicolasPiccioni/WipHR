@@ -121,6 +121,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .Hero__CTA{
