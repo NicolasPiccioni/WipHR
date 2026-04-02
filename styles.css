@@ -102,7 +102,7 @@ body{
 }
 
 .Hero__Title{
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: var(--Blanco);
 
     margin: 0;
@@ -112,7 +112,7 @@ body{
 }
 
 .Hero__Description{
-    font-size: 1.2rem;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
     color: var(--Gris);
 
     margin: 18px 0;
@@ -187,6 +187,11 @@ body{
     justify-content: center;
     align-items: center;
     gap: 8px;
+    transition: transform 0.25s ease;
+}
+
+.Hero__Partners--Item:hover{
+    transform: translateY(-2px) scale(1.03);
 }
 
 .Hero__Partners--Logo{
@@ -212,9 +217,9 @@ body{
     background-color: var(--Secondary-BG);
 }
 
-h1 {
+.container h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin: 0 0 32px;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -332,7 +337,7 @@ h1 {
     margin: 0 0 52px;
 
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: var(--Blanco);
 }
 
@@ -449,12 +454,12 @@ h1 {
 .BestTalent__Title{
     margin: 0 0 24px;
 
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: var(--Blanco);
 }
 
 .BestTalent__Description{
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
     color: var(--Gris-Secundario);
 }
 
@@ -570,7 +575,16 @@ h1 {
 
     padding: 12px;
     border-radius: 50%;
-    line-height: 0; /* para centrar el SVG */
+    line-height: 0;
+
+    transition: all 0.3s ease; /* transición suave */
+}
+
+.Social__Link:hover{
+    transform: scale(1.15); /* se agranda */
+    background-color: var(--Gris-Secundario); /* cambia a color de acento */
+    color: var(--Secondary-BG);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra sutil */
 }
 
 /* ----------------------------- 
@@ -643,6 +657,7 @@ h1 {
 
     .Hero__Partners--List{
         margin: 36px 0 0;
+        padding: 16px;
     }
 
     /* ----------------------------- 
@@ -676,11 +691,21 @@ h1 {
 @media (max-width: 416px) {
     
     .Nav__List{
-        justify-content: center;
+        padding: 0 18px;
+    }
+
+    .Nav__Logo--Image{
+        width: 150px;
     }
 
     .Nav__Item--Link{
-        display: none;
+        margin: 0;
+        margin-bottom: 8px;
+        padding: 8px 24px;
+
+        font-size: 0.8rem;
+        border-top-left-radius: 18px;
+        border-bottom-right-radius: 18px;
     }
 
 }
