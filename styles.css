@@ -35,7 +35,7 @@ body{
 
 .Nav__List{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
     margin: 0;
@@ -45,7 +45,7 @@ body{
 }
 
 .Nav__Logo--Image{
-    width: 200px;
+    width: 320px;
 }
 
 .Nav__Item--Link{
@@ -395,9 +395,11 @@ body{
 ----------------------------- */
 
 .Attention{
+    display: flex;
+    justify-content: center;
     position: relative;
 
-    padding: 24px 0 0;
+    padding: 0;
 }
 
 /* Contenedor principal con proporción fija */
@@ -423,14 +425,14 @@ body{
 
 /* Imagen secundaria */
 .Attention__SecondIMG--Container{
-    position: absolute;
+    /* position: absolute; */
 
     /* posiciones proporcionales */
     top: clamp(20%, 12%, 30%);
     left: 2%;
 
     /* tamaño flexible */
-    width: clamp(200px, 22vw, 350px);
+    width: clamp(200px, 36vw, 600px);
     aspect-ratio: 1 / 1;
 }
 
@@ -523,7 +525,6 @@ body{
 
 .Contact__Links--Container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 12px;
@@ -538,7 +539,7 @@ body{
     background-color: var(--Accent-Color);
     color: var(--Blanco);
     text-decoration: none;
-    padding: 8px 52px;
+    padding: 8px 32px;
     border-radius: 24px;
 
     width: 100%;
@@ -619,6 +620,16 @@ body{
     font-size: 0.62rem;
 }
 
+.PageFooter__Oris--Link{
+    color: rgba(209, 233, 226, 0.82);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.PageFooter__Oris--Link:hover{
+    color: var(--Accent-Color);
+}
+
 /* ----------------------------------------------------------------------------------------------- 
                                             MOBILE STYLES
 ----------------------------------------------------------------------------------------------- */
@@ -664,9 +675,11 @@ body{
             Attention Article
     ----------------------------- */
 
+    /*
     .Attention__SecondIMG--Container{
         display: none;
     }
+    */
 
     /* ----------------------------- 
             Contact Article
